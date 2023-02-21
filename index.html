@@ -7,16 +7,18 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link rel="icon" href="tractor_icon.png">
     <title>TrackIt! - Tractor Insurance Loan Calculator</title>
   </head>
   <body class="bg-dark">
+    <img src="tractor_background.jpeg" alt="Tractor_Background" class="bg-image">
     <!-- Main Calculator Box -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 mx-auto">
+        <div class="col-lg-6 mx-auto" style="padding-top: 40px;">
           <div class="card card-body mt-6 text-center">
-            <h1 class="heading pb-4">TrackIt! Loan Calculator</h1>
-            <form action="" id="load-form">
+            <h1 class="heading pb-3">TrackIt! Loan Calculator</h1>
+            <form action="" id="loan-form">
               <div class="form-group d-grid gap-3">
                 <div class="input-group">
                     <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-pound" viewBox="0 0 16 16">
@@ -28,35 +30,35 @@
                     <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
                         <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0zM4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
                         </svg></span>
-                    <input type="number" class="form-control" id="amount-el" placeholder="Interest Percentage">
+                    <input type="number" class="form-control" id="interest-el" placeholder="Interest Percentage">
                 </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" id="years-el" placeholder="Years To Repay">
+                        <input type="number" class="form-control" id="years-el" placeholder="Years To Repay" >
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Calculate" class="btn btn-dark col-lg-12 mx-auto">
+                        <input type="submit" value="Calculate" class="btn btn-lg btn-dark col-lg-12 mx-auto" id="calculate-btn">
                     </div>
               </div>
             </form>
             <!-- Loading Animation -->
-            <!-- <div class="loader">
-                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            </div> -->
+            <div class="loader" style="padding-top: 25px;">
+                <div class="lds-spinner" ><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
             <!-- Calculation Results -->
             <div class="results-el" style="padding-top: 25px;">
                 <h5 style="padding-bottom: 10px;">Your Results</h5>
                 <div class="form-group d-grid gap-2">
                     <div class="input-group">
                         <span class="input-group-text">Monthly Payment Amount:</span>
-                        <input type="number" class="form-control" id="monthly-payment-el" placeholder="" disabled>
+                        <input type="number" class="form-control" id="monthly-pay-el" placeholder="" disabled>
                     </div>
                     <div class="input-group">
                         <span class="input-group-text">Total Payment Amount:</span>
-                        <input type="number" class="form-control" id="yearly-payment-el" placeholder="" disabled>
+                        <input type="number" class="form-control" id="yearly-pay-el" placeholder="" disabled>
                     </div>
                     <div class="input-group">
-                        <span class="input-group-text">Total Interest</span>
-                        <input type="number" class="form-control" id="interest-payment-el" placeholder="" disabled>
+                        <span class="input-group-text">Total Interest:</span>
+                        <input type="number" class="form-control" id="interest-pay-el" placeholder="" disabled>
                     </div>
                 </div>
             </div>

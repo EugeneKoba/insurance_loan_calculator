@@ -1,7 +1,14 @@
+/* Main Body */
+.bg-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity:  0.6;
+}
 
-
-/* Loading Icon (from loading.io css spinner repo, in GitHub */
-
+/* Loading Icon (from loading.io css spinner repo, in GitHub) */
 .lds-spinner {
     color: official;
     display: inline-block;
